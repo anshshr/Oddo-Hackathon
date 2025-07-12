@@ -1,7 +1,7 @@
 # Oddo-Hackathon
 Team Name :- Hack Hustlers
 
-Leder Nane :- Ansh Shrivastav
+Leader Nane :- Ansh Shrivastav
 
 Team Members:-
 1. Ronak Sharma
