@@ -23,6 +23,7 @@ import {
   User,
   Filter
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -31,7 +32,7 @@ const Home = () => {
   const galleryRef = useRef(null);
 
   const heroImages = [
-    "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
+    "https://img.freepik.com/free-photo/couple-having-fun-sh-shop_482257-76495.jpg?semt=ais_hybrid&w=740",
     "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&h=600&fit=crop",
     "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800&h=600&fit=crop",
     "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800&h=600&fit=crop",
@@ -229,9 +230,9 @@ const Home = () => {
               Transform your wardrobe sustainably. Discover, swap, and earn.
             </p>
             <div className="flex gap-4 justify-center">
-              <button className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105">
+              <Link to="/products" className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105">
                 Start Swapping <ArrowRight className="w-5 h-5 ml-2 inline" />
-              </button>
+              </Link>
               <button className="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-full text-lg font-semibold backdrop-blur-sm transition-all duration-300">
                 Browse Items
               </button>

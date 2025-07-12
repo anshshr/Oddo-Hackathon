@@ -186,11 +186,11 @@ const Header = () => {
             </div>
 
             <a 
-              href="/products" 
+              href="/admin" 
               className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200"
             >
               <Heart className="w-4 h-4" />
-              <span>Wishlist</span>
+              <span>Admin</span>
             </a>
           </div>
 
@@ -266,36 +266,14 @@ const Header = () => {
                     </div>
                     
                     <a 
-                      href="/profile" 
+                      href="/user/:userId" 
                       className="flex items-center space-x-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600"
                     >
                       <UserCircle className="w-4 h-4" />
                       <span>My Profile</span>
                     </a>
                     
-                    <a 
-                      href="/my-items" 
-                      className="flex items-center space-x-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600"
-                    >
-                      <Package className="w-4 h-4" />
-                      <span>My Items</span>
-                    </a>
-                    
-                    <a 
-                      href="/wishlist" 
-                      className="flex items-center space-x-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600"
-                    >
-                      <Heart className="w-4 h-4" />
-                      <span>My Wishlist</span>
-                    </a>
-                    
-                    <a 
-                      href="/settings" 
-                      className="flex items-center space-x-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600"
-                    >
-                      <Settings className="w-4 h-4" />
-                      <span>Settings</span>
-                    </a>
+                  
                     
                     <hr className="my-2" />
                     

@@ -82,15 +82,16 @@ router.put("/update/:id", async (req, res) => {
 
 router.get("/allusers", async (req, res) => {
   try {
-  
     const users = await UserDetail.find().sort({ createdAt: -1 });
-    if (users.length === 0) {
-      return res.status(404).json({ message: "No users found" });
-    }
-   
+
+    // Optional: you can still send an empty array with 200
     res.status(200).json({ users });
+
   } catch (error) {
-    res.status(500).json({ message: "Error fetching users", error: error.message });
+    res.status(500).json({
+      message: "Error fetching users",
+      error: error.message
+    });
   }
 });
 

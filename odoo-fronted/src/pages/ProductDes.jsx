@@ -19,6 +19,7 @@ import {
   Loader2
 } from 'lucide-react';
 import { useParams } from 'react-router-dom';
+import Su from '../components/Su';
 
 const ProductDes = () => {
     const {id} = useParams();
@@ -111,14 +112,10 @@ const ProductDes = () => {
         })
       });
 
-      if (response.ok) {
-        alert('Request sent successfully!');
-      } else {
-        alert('Failed to send request');
-      }
+     
     } catch (error) {
       console.error('Error making request:', error);
-      alert('Error sending request');
+     
     }
   };
 
@@ -347,10 +344,8 @@ const ProductDes = () => {
                 >
                   <div className="flex items-center justify-center gap-2">
                     {product?.status === 'available' ? (
-                      <>
-                        <CheckCircle className="w-5 h-5" />
-                        Make Request
-                      </>
+                    
+                      <Su/>
                     ) : (
                       <>
                         <Clock className="w-5 h-5" />
