@@ -5,6 +5,7 @@ const connectDB = require('./db');
 const cors = require("cors");
 
 const app = express();
+const authMiddleware = require("./middleware");
 
 
 // 🔓 Allow all origins (default, for development)
@@ -15,11 +16,16 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.json());
 const authRoutes = require('./routes/auth');
+const userRoutes = require('./routes/User');
+const productRoutes = require('./routes/product');
 
 
 
 // Use routes
 app.use('/api/auth', authRoutes);
+app.use('/api/user' ,userRoutes); // Protect user routes with auth middleware
+app.use('/api/products',  productRoutes); // Protect product routes with auth middleware
+
 
 
 

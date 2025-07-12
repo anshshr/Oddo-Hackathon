@@ -16,13 +16,13 @@ const productSchema = new mongoose.Schema({
   category: {
     type: String,
     required: true,
-    enum: ["Top", "Bottom", "Dress", "Outerwear", "Accessories", "Other"]
+    
   },
 
   type: {
     type: String,
     required: true,
-    enum: ["Men", "Women", "Unisex", "Kids"]
+    
   },
 
   size: {
@@ -30,16 +30,8 @@ const productSchema = new mongoose.Schema({
     required: true
   },
 
-  condition: {
-    type: String,
-    required: true,
-    enum: ["New", "Like New", "Good", "Worn"]
-  },
+ 
 
-  tags: {
-    type: [String],
-    default: []
-  },
 
   images: {
     type: [String], // array of image URLs

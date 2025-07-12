@@ -2,6 +2,10 @@ import "./App.css";
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
+import AuthPage from "./pages/AuthPage";
+import Userprofile from "./pages/Userprofile";
+import Products from "./pages/Products";
+import ProductDes from "./pages/ProductDes"
 ;
 
 function App() {
@@ -12,8 +16,11 @@ function App() {
       errorElement: <Error />,
       children: [
         { index: true, element: <Home /> },
-        // { path: "counters", element: <Counters /> },
-    
+        
+        { path: "auth", element: <AuthPage/> },
+         { path: "user/:userId", element: <Userprofile/> },
+            { path: "products", element: <Products/> },
+             { path: "productdes/:id", element: <ProductDes/> },
 
    
         // { path: "machine/:id", element: <MachineDashboard /> },
