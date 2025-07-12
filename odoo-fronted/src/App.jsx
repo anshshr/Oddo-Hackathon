@@ -7,6 +7,7 @@ import Userprofile from "./pages/Userprofile";
 import Products from "./pages/Products";
 import ProductDes from "./pages/ProductDes"
 ;
+import Admin from "./pages/Admin";
 
 function App() {
   const router = createBrowserRouter([
@@ -21,7 +22,7 @@ function App() {
          { path: "user/:userId", element: <Userprofile/> },
             { path: "products", element: <Products/> },
              { path: "productdes/:id", element: <ProductDes/> },
-
+{ path: "admin", element: <Admin/> },
    
         // { path: "machine/:id", element: <MachineDashboard /> },
 

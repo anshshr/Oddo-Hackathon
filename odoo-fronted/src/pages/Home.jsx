@@ -183,34 +183,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-white overflow-hidden">
-      {/* Top Navigation Bar */}
-      <div className="bg-black text-white p-4 border-b border-gray-800">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center">
-              <Sparkles className="w-4 h-4 text-white" />
-            </div>
-            <span className="text-xl font-bold">ReWear</span>
-          </div>
-          
-          <div className="flex-1 max-w-2xl mx-8 relative">
-            <input 
-              type="text" 
-              placeholder="Search for items, brands, or categories..."
-              className="w-full bg-gray-800 text-white px-4 py-2 rounded-full border border-gray-700 focus:border-green-400 focus:outline-none"
-            />
-            <Search className="absolute right-3 top-2.5 w-5 h-5 text-gray-400" />
-          </div>
-          
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2 bg-gray-800 px-3 py-1 rounded-full">
-              <Coins className="w-4 h-4 text-yellow-400" />
-              <span className="text-sm font-semibold">{coins}</span>
-            </div>
-            <User className="w-6 h-6 text-gray-400 hover:text-white cursor-pointer" />
-          </div>
-        </div>
-      </div>
+      
 
       {/* Big Scrolling Text */}
       <div className="bg-black text-white py-4 overflow-hidden relative">

@@ -48,16 +48,14 @@ router.post("/create",authMiddleware, async (req, res) => {
 });
 
 // 🗑️ Delete Product by ID
-router.delete("/delete/:id",authMiddleware , async (req, res) => {
+router.delete("/delete/:id", async (req, res) => {
   try {
     const productId = req.params.id;
     const product = await Product.findById(productId);
 
     if (!product) return res.status(404).json({ message: "Product not found" });
 
-    if (product.ownerId.toString() !== req.user.userId) {
-      return res.status(403).json({ message: "Unauthorized: Only the owner can delete" });
-    }
+   
 
     await Product.findByIdAndDelete(productId);
     res.status(200).json({ message: "Product deleted successfully" });
@@ -68,16 +66,13 @@ router.delete("/delete/:id",authMiddleware , async (req, res) => {
 });
 
 // ✏️ Update Product by ID
-router.put("/update/:id",authMiddleware, async (req, res) => {
+router.put("/update/:id", async (req, res) => {
   try {
     const productId = req.params.id;
     const product = await Product.findById(productId);
 
     if (!product) return res.status(404).json({ message: "Product not found" });
 
-    if (product.ownerId.toString() !== req.user.userId) {
-      return res.status(403).json({ message: "Unauthorized: Only the owner can update" });
-    }
 
     const updates = req.body;
     if (updates.swapOption === "swap") updates.pointsRequired = 0;
